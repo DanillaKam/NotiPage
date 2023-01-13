@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nottification-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  border-radius: 15px;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 15px;
+  overflow: auto;
+}
+.nottification-page p {
+  color: hsl(219deg, 12%, 42%);
+  font-size: 14px;
+  font-weight: 500;
+}
+.nottification-page h1 {
+  font-size: 14px;
+}
+
+.nottifications {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 65px;
+  margin: 4px 0 4px 0;
+}
+.nottifications .photo {
+  margin: 10px;
+}
+.nottifications .photo img {
+  width: 40px;
+  height: 40px;
+}
+.nottifications .time-status {
+  color: hsl(219deg, 12%, 42%);
+  font-size: 14px;
+}
+.nottifications .name {
+  color: rgb(10, 9, 9);
+  font-weight: 800;
+  transition: color 0.2s;
+}
+.nottifications .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+}
+.nottifications .text .group-name {
+  color: hsl(219deg, 12%, 42%);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.nottifications .text .group-name:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.nottifications .text .post-name {
+  color: hsl(219deg, 12%, 42%);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.nottifications .text .post-name:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+
+.mark-all-read {
+  font-weight: 500;
+}
+
+.name,
+.mark-all-read,
+.messaage-text,
+.group-name,
+.post-name:hover {
+  cursor: pointer;
+}
+
+.messaage-text:hover {
+  background-color: hsl(205deg, 33%, 90%);
+}
+
+.name:hover,
+.mark-all-read:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+
+.top {
+  justify-content: space-between;
+}
+.top .notifications-number {
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  background-color: hsl(219deg, 85%, 26%);
+  color: hsl(0deg, 0%, 100%);
+  width: 35px;
+  font-size: 16px;
+  margin: 5px;
+}
+.top .notifications-number .mark-all-read {
+  transition: color 0.2s;
+}
+
+.unread {
+  border-radius: 5px;
+  background-color: hsl(210deg, 60%, 98%);
+}
+.unread .fa-solid {
+  margin: 5px;
+  font-size: 5px;
+  color: hsl(1deg, 90%, 64%);
+}
+
+.showed-message {
+  align-items: start;
+  flex-grow: 0.2;
+  height: 150px;
+}
+.showed-message .messaage-text {
+  margin-top: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+.showed-message .messaage-text p {
+  margin: 20px;
+}
+.showed-message .text {
+  justify-content: space-around;
+}
+.showed-message .top .notifications-number {
+  font-size: 14px;
+  width: 20px;
+}
+
+@media (min-width: 300px) and (max-width: 374px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .nottification-page {
+    width: 100%;
+    height: 100%;
+  }
+  .nottification-page p {
+    font-size: 10px;
+  }
+  .nottification-page .top p {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .nottification-page .top .notifications-number {
+    font-size: 14px;
+    width: 20px;
+  }
+  .showed-message .messaage-text {
+    margin-top: 5px;
+  }
+  .showed-message .messaage-text p {
+    margin: 10px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 375px) {
+  .nottifications {
+    margin-top: 6px;
+  }
+  .nottification-page {
+    height: 100%;
+  }
+  .nottification-page p {
+    font-size: 12px;
+  }
+  .nottification-page .top p {
+    font-size: 16px;
+  }
+  .nottification-page .top .notifications-number {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 575px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  .nottification-page {
+    width: 90%;
+    height: 90%;
+  }
+  .nottification-page p {
+    font-size: 14px;
+  }
+  .nottification-page .top p {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .nottification-page .top .notifications-number {
+    font-size: 24px;
+    width: 40px;
+  }
+  .showed-message .messaage-text {
+    margin-top: 5px;
+  }
+  .showed-message .messaage-text p {
+    margin: 20px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    height: 100%;
+  }
+  .nottification-page {
+    width: 60%;
+    height: 90%;
+  }
+  .nottification-page .top p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    height: 100%;
+  }
+  .nottification-page {
+    width: 50%;
+    height: 90%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    height: 100%;
+  }
+  .nottification-page {
+    width: 45%;
+    height: 90%;
+  }
+  .nottification-page .top p {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+    height: 100%;
+  }
+  .nottification-page {
+    width: 40%;
+    height: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
