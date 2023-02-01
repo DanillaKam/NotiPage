@@ -42,4 +42,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [DanillKam](https://github.com/DanillaKam)
+- Website - [DanillaKam](https://github.com/DanillaKam)
